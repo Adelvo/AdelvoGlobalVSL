@@ -1,3 +1,4 @@
 ﻿# >100 MB, exceeds GitHub file size limit
 *.mp4
 
+!assets/vsl.mp4

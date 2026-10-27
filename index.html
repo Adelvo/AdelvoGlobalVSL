@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
 
-  <link rel="stylesheet" href="css/styles.css?v=20" />
+  <link rel="stylesheet" href="css/styles.css?v=21" />
 </head>
 <body>
 
@@ -90,29 +90,45 @@
 
         <!-- 4. VSL -->
         <div class="vsl">
-          <div class="vsl__frame">
-            <!-- ====================================================
-                 VSL VIDEO GOES HERE
-                 ----------------------------------------------------
-                 Replace the entire <div class="vsl__placeholder">…</div>
-                 block below with your embed, e.g.:
+          <!-- Custom player (js/vsl.js): no skipping ahead until the video
+               has been watched to the end once. -->
+          <div class="vsl__frame" id="vsl">
+            <video src="assets/vsl.mp4" poster="assets/vsl-poster.jpg"
+                   preload="auto" playsinline webkit-playsinline
+                   disablepictureinpicture controlslist="nodownload noplaybackrate"></video>
 
-                 YouTube / Vimeo / Wistia / Loom iframe:
-                 <iframe
-                   src="https://YOUR-VIDEO-EMBED-URL"
-                   title="Video"
-                   allow="autoplay; fullscreen; picture-in-picture"
-                   allowfullscreen></iframe>
+            <button type="button" class="vsl__unmute" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <span>Click to turn on sound</span>
+            </button>
 
-                 Self-hosted file:
-                 <video src="assets/vsl.mp4" controls playsinline
-                        poster="assets/vsl-poster.jpg"></video>
+            <button type="button" class="vsl__bigplay" aria-label="Play video" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            </button>
 
-                 The iframe/video is automatically sized to fill the
-                 16:9 frame — no extra CSS needed.
-                 ==================================================== -->
-            <div class="vsl__placeholder" role="img" aria-label="Video coming soon"></div>
-            <!-- ==================== END VSL ==================== -->
+            <div class="vsl__controls">
+              <button type="button" class="vsl__btn" data-action="play" aria-label="Pause">
+                <svg class="vsl__ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+                <svg class="vsl__ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <button type="button" class="vsl__btn" data-action="back" aria-label="Back 10 seconds">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/><text x="12" y="16.5" text-anchor="middle" font-size="7" font-weight="700" font-family="Arial">10</text></svg>
+              </button>
+
+              <div class="vsl__bar" role="slider" tabindex="0" aria-label="Video position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div class="vsl__bar-watched"></div>
+                <div class="vsl__bar-played"></div>
+              </div>
+              <span class="vsl__time">0:00</span>
+
+              <button type="button" class="vsl__btn" data-action="mute" aria-label="Mute">
+                <svg class="vsl__ico-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <svg class="vsl__ico-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M16 9l6 6M22 9l-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </button>
+              <button type="button" class="vsl__btn" data-action="fullscreen" aria-label="Fullscreen">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -401,6 +417,7 @@
     </div>
   </div>
 
+  <script src="js/vsl.js?v=1" defer></script>
   <script src="js/apply.js?v=6" defer></script>
 </body>
 </html>
