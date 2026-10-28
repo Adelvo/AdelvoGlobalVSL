@@ -6,15 +6,14 @@
   <title>Privacy Policy | Adelvo Global</title>
   <meta name="description" content="How Adelvo Global FZ-LLC collects, uses and protects your information." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Font: Inter, self-hosted (see @font-face in css/styles.css) -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="256x256" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/favicon.png" />
 
-  <link rel="stylesheet" href="css/styles.css?v=21" />
+  <link rel="stylesheet" href="css/styles.css?v=23" />
 </head>
 <body>
 
@@ -32,8 +31,8 @@
     <div class="container legal__inner">
       <p class="legal__eyebrow">Legal</p>
       <h1>Privacy Policy</h1>
-      <p class="legal__meta">Last updated: 1 October 2026</p>
-      <p class="legal__intro">This policy explains what information we collect when you apply for our service, book a call or work with us, why we collect it, and what you can do about it. We’ve tried to keep it short and in plain English.</p>
+      <p class="legal__meta">Last updated: 28 October 2026</p>
+      <p class="legal__intro">This policy explains what information we collect when you visit this website, apply for our service, book a call or work with us, why we collect it, who else is involved, and what you can do about it. We’ve tried to keep it short and in plain English.</p>
 
       <nav class="legal__toc" aria-labelledby="pp-toc">
         <p class="legal__toc-title" id="pp-toc">Contents</p>
@@ -41,10 +40,11 @@
           <li><a href="#who-we-are">Who we are</a></li>
           <li><a href="#what-we-collect">Information we collect</a></li>
           <li><a href="#why">Why we use it</a></li>
-          <li><a href="#no-marketing">What we don’t do</a></li>
-          <li><a href="#recording">Call recording &amp; transcription</a></li>
+          <li><a href="#emails">Emails we send you</a></li>
+          <li><a href="#recording">Call recording &amp; AI transcription</a></li>
+          <li><a href="#hosting">Website hosting</a></li>
           <li><a href="#tools">Tools and service providers</a></li>
-          <li><a href="#cookies">Cookies</a></li>
+          <li><a href="#cookies">Cookies and browser storage</a></li>
           <li><a href="#transfers">International processing</a></li>
           <li><a href="#retention">How long we keep information</a></li>
           <li><a href="#security">Security</a></li>
@@ -62,25 +62,30 @@
 
       <section id="what-we-collect">
         <h2>2. Information we collect</h2>
-        <h3>Through our application and booking process</h3>
-        <p>When you apply for our service and book a call, we may collect:</p>
+        <h3>Through our application form</h3>
+        <p>Our application form asks for:</p>
         <ul>
           <li>your full name</li>
           <li>your email address</li>
-          <li>your website</li>
+          <li>your business website</li>
           <li>what your business sells</li>
           <li>your average client value</li>
-          <li>whether your average customer is worth more than $3,000</li>
-          <li>whether your company is B2B</li>
-          <li>your ideal customer profile (ICP)</li>
+          <li>who your ideal customer is</li>
           <li>how you currently get clients</li>
           <li>whether you have used cold email before</li>
-          <li>any other information you choose to give us when booking or during a call</li>
         </ul>
+        <p>Your answers stay in your browser while you fill in the form. They are only passed on when you reach the booking step: the booking calendar from Calendly is then loaded with your answers included in its web address, so your booking is filled in for you (see <a href="#tools">section 7</a>). If you close the form before that step, your answers are not sent to us or to Calendly.</p>
+        <p>The first two questions (whether your average customer is worth more than $3,000 and whether you have a B2B offer) are only checked in your browser to see if the service can be a fit. Your answers to them are not sent to us or to Calendly.</p>
+        <h3>When you book a call</h3>
+        <p>When you book, Calendly receives the details of your booking, such as the time you choose, your form answers and anything else you add. We receive these booking details from Calendly.</p>
+        <h3>During calls</h3>
+        <p>We note what you tell us about your business during calls. If a call is recorded and transcribed, we also process the recording, the transcript and AI-generated notes, as described in <a href="#recording">section 5</a>.</p>
         <h3>When you work with us</h3>
         <p>If you become a client, we also process the business information needed to run your campaigns, such as details about your offer, target market and campaign materials, as well as our communication with you.</p>
         <h3>When you email us</h3>
         <p>If you contact us, we receive your email address and whatever you include in your message.</p>
+        <h3>When you visit this website</h3>
+        <p>When you visit, our hosting provider processes technical information about your visit, such as your IP address and the page you request. See <a href="#hosting">section 6</a>.</p>
       </section>
 
       <section id="why">
@@ -88,108 +93,157 @@
         <p>We use this information to:</p>
         <ul>
           <li>assess whether your company qualifies for our service</li>
-          <li>prepare for calls you book with us</li>
+          <li>schedule calls you book with us and prepare for them</li>
           <li>understand your business and its target market</li>
+          <li>follow up on the consultation you asked for, our offer and a possible collaboration</li>
           <li>onboard approved clients</li>
           <li>build and manage cold email campaigns for approved clients</li>
-          <li>send booking confirmations and reminders</li>
           <li>communicate with you about appointments and the service</li>
+          <li>deliver this website, keep it secure and fix technical problems</li>
+          <li>meet legal obligations and protect our legal rights where necessary</li>
         </ul>
       </section>
 
-      <section id="no-marketing">
-        <h2>4. What we don’t do</h2>
-        <p>We do <strong>not</strong> currently use your information for general promotional email marketing. We email you about your application, your booked calls and the service.</p>
+      <section id="emails">
+        <h2>4. Emails we send you</h2>
+        <p>If you book a call or meeting with us, we email you in connection with it. This can include booking confirmations and reminders, as well as follow-ups about the consultation you asked for, our offer and a possible collaboration. If you become a client, we also email you about the service.</p>
+        <p>We only send these emails to people who have booked a call or meeting with us. We do <strong>not</strong> run a newsletter or any other general marketing email list. If you don’t want further follow-ups, reply to our email or write to <a href="mailto:support@adelvo-global.ae">support@adelvo-global.ae</a>.</p>
         <p>We do not sell your personal information.</p>
       </section>
 
       <section id="recording">
-        <h2>5. Call recording &amp; transcription</h2>
-        <p><strong>Calls with us may be recorded and transcribed.</strong> This includes strategy, onboarding and other calls about the service. We let you know about this before or at the start of a recorded call.</p>
-        <p>We use recordings and transcripts to:</p>
+        <h2>5. Call recording &amp; AI transcription</h2>
+        <p>We may want to record and transcribe calls with you, such as strategy and onboarding calls. For this we use Calendly’s AI note-taking tool (Calendly Notetaker). It joins the video meeting, records it, creates a transcript and produces AI-generated notes, such as a summary and action items.</p>
+        <p><strong>Booking a call does not mean you agree to it being recorded or transcribed.</strong> You can tell us before or during the call that you don’t want this. We will then not record or transcribe the call, or stop doing so, and the call can go ahead without it.</p>
+        <h3>What this includes</h3>
         <ul>
-          <li>document the information you give us during the call</li>
-          <li>onboard you as a client</li>
-          <li>plan your campaign strategy</li>
-          <li>understand your offer and ideal customer profile</li>
-          <li>deliver the service internally</li>
+          <li>the recording of the conversation, including your voice</li>
+          <li>the names of the participants</li>
+          <li>the transcript of what is said</li>
+          <li>AI-generated notes, such as summaries and action items</li>
+          <li>any information about you or your business that you share during the call</li>
         </ul>
-        <p>Recordings and transcripts are kept as described in <a href="#retention">section 9</a>. If you have questions about a recording, contact us at <a href="mailto:support@adelvo-global.ae">support@adelvo-global.ae</a>.</p>
+        <h3>Why we use it</h3>
+        <ul>
+          <li>to document the information you give us during the call</li>
+          <li>to onboard you as a client</li>
+          <li>to plan your campaign strategy</li>
+          <li>to understand your offer and ideal customer profile</li>
+          <li>to deliver the service internally</li>
+        </ul>
+        <h3>Who has access</h3>
+        <p>Recordings, transcripts and notes are available to our team members who need them for the purposes above. They are processed and stored by Calendly, which uses third-party AI providers to create transcripts and notes. You can read more in <a href="https://calendly.com/help/ai-at-calendly" target="_blank" rel="noopener">Calendly’s information about AI</a>. The video meeting service used for the call, shown in your booking confirmation, also processes the call to provide the meeting.</p>
+        <p>How long we keep recordings, transcripts and notes is explained in <a href="#retention">section 10</a>.</p>
+      </section>
+
+      <section id="hosting">
+        <h2>6. Website hosting</h2>
+        <p>This website is hosted by <strong>Vercel</strong> (Vercel Inc., United States). Vercel delivers the website through its global network, so your request may be handled in a data center near you.</p>
+        <p>When you visit a page or load a file from this website, Vercel processes technical information about the request, such as:</p>
+        <ul>
+          <li>your IP address</li>
+          <li>the date and time of the request</li>
+          <li>the page or file requested</li>
+          <li>the referring web address, if your browser sends it</li>
+          <li>browser, device and operating system information (user agent)</li>
+          <li>technical details of the response, such as status codes</li>
+        </ul>
+        <p>This is needed to deliver the website to you, to protect it against misuse and attacks, and to find and fix errors. Vercel keeps this technical data for limited periods that Vercel sets; we don’t set a fixed period ourselves. Based on these requests, Vercel’s dashboard may show us aggregated usage information, such as how many requests the website received. See the <a href="https://vercel.com/legal/privacy-notice" target="_blank" rel="noopener">Vercel Privacy Notice</a>.</p>
+        <p>We have <strong>not</strong> added Vercel Web Analytics, Vercel Speed Insights or any other analytics or tracking script to this website, and the website does not send analytics events. Your form answers are not part of the requests sent to Vercel.</p>
+        <p>We use <strong>GitHub</strong> to store the website’s code and to deploy it to Vercel. This website does not send your form answers or visit data to GitHub.</p>
       </section>
 
       <section id="tools">
-        <h2>6. Tools and service providers</h2>
-        <p>We use a small number of third-party tools to run our application, booking and client process:</p>
+        <h2>7. Tools and service providers</h2>
+        <p>We use a small number of service providers to run our website, application, booking and client process:</p>
         <ul>
-          <li><strong>Calendly</strong> is used to schedule calls. When you reach the booking step, the information you entered in our application form (such as your name, email and answers) is passed to Calendly to fill in your booking. Calendly processes your booking details and sends confirmations and reminders. <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly Privacy Notice</a></li>
-          <li><strong>Airtable</strong> is used to store relevant customer and business information, such as application details and client records. <a href="https://www.airtable.com/company/privacy" target="_blank" rel="noopener">Airtable Privacy Policy</a></li>
+          <li><strong>Calendly</strong> is used to schedule calls and, where you don’t object, to record and transcribe them (see <a href="#recording">section 5</a>). When you reach the booking step, your form answers are included in the web address of the Calendly booking calendar, so Calendly receives them when the calendar loads and uses them to fill in your booking. Calendly also sends booking confirmations and reminders. <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly Privacy Notice</a></li>
+          <li><strong>Airtable</strong> is our database for relevant application, booking and client information, such as application details and client records. <a href="https://www.airtable.com/company/privacy" target="_blank" rel="noopener">Airtable Privacy Policy</a></li>
+          <li><strong>Vercel</strong> hosts this website (see <a href="#hosting">section 6</a>).</li>
         </ul>
         <p>For approved clients, we also use cold email software and infrastructure providers (for example for domains, mailboxes and sending) to run the campaigns. We share with them only what is needed to operate your campaigns.</p>
-        <p>These providers are independent companies. We do not control their own privacy practices, and their handling of information is governed by their own privacy policies.</p>
-        <!-- EDIT: add any new tool here once it processes personal information (e.g. the call recording / transcription tool). -->
+        <h3>Who is responsible</h3>
+        <p>We remain responsible for how we use your information. Our service providers mostly process it on our behalf, to provide their services to us, for example when Airtable stores our records or Vercel hosts this website. Some providers also process certain information for their own purposes, for example to operate, secure and improve their services, or because you have your own account with them. For that processing, the provider is responsible, and its own privacy notice also applies.</p>
       </section>
 
       <section id="cookies">
-        <h2>7. Cookies</h2>
-        <p>This website itself does not set analytics, advertising or tracking cookies. We do not use tools such as Google Analytics, Meta Pixel or Hotjar.</p>
-        <p>Two third-party services are loaded by the website:</p>
-        <ul>
-          <li><strong>Calendly:</strong> when you reach the booking step, a Calendly booking calendar is loaded. Calendly may set its own cookies, including non-essential ones, and may show its own cookie banner where you can manage your choices. See the <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly Privacy Notice</a>.</li>
-          <li><strong>Google Fonts:</strong> the website’s font is loaded from Google Fonts. To deliver the font, Google receives technical information such as your IP address. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
-        </ul>
+        <h2>8. Cookies and browser storage</h2>
+        <p>Our own website pages do not set cookies. We do not use analytics, advertising or tracking tools such as Google Analytics, Meta Pixel or Hotjar. The website’s font is stored on and loaded from our own website, not from Google Fonts or another font service.</p>
+        <p>The video player stores one setting in your browser’s local storage once you have watched the video to the end, so you can skip through it on later visits. This setting stays on your device and is not sent to us. You can delete it by clearing your browser’s site data.</p>
+        <p><strong>Calendly:</strong> when you reach the booking step, the Calendly booking calendar is loaded. Calendly may set its own cookies, including non-essential ones, and may show its own cookie banner where you can manage your choices. See the <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly Privacy Notice</a>.</p>
       </section>
 
       <section id="transfers">
-        <h2>8. International processing</h2>
-        <p>Some of our service providers operate in, or store data in, countries outside the United Arab Emirates, including the United States. This means your information may be processed in those countries under the provider’s own terms and safeguards.</p>
+        <h2>9. International processing</h2>
+        <p>We are based in the United Arab Emirates. Most of our service providers are based in the United States, and your information may be processed in countries other than the one where you live:</p>
+        <ul>
+          <li><strong>Vercel</strong> is a US company and delivers this website through data centers in different countries (see <a href="#hosting">section 6</a>).</li>
+          <li><strong>Calendly</strong> states that it stores user and invitee data in data centers in the United States. Its AI features use third-party AI providers.</li>
+          <li><strong>Airtable</strong> stores data in the United States by default.</li>
+        </ul>
+        <p>Data protection laws in these countries may differ from the laws where you live. We use established providers, share only what is needed for the purposes in this policy and limit access within our team. If you have questions about how your information is protected when it is processed abroad, please contact us.</p>
       </section>
 
       <section id="retention">
-        <h2>9. How long we keep information</h2>
-        <p>We keep personal information only for as long as reasonably necessary for the purposes described in this policy.</p>
-        <p>For applicants and clients taking part in the free service, relevant application and CRM information is generally kept for the 60-day service period. Some information may be kept longer where reasonably necessary, for example:</p>
+        <h2>10. How long we keep information</h2>
         <ul>
-          <li>if you continue working with us under a separate paid agreement</li>
-          <li>to meet legal, tax or accounting obligations</li>
-          <li>to handle questions, complaints or disputes</li>
-          <li>as part of legitimate business records, such as records of approved software costs and invoices</li>
+          <li><strong>Application and booking details, and recordings, transcripts and AI notes of a call:</strong> we delete these 60 days after the call they relate to, unless one of the exceptions below applies.</li>
+          <li><strong>If you become a client:</strong> we keep the information we need to deliver the service for as long as we need it for that purpose, and then delete it unless one of the exceptions below applies.</li>
+          <li><strong>Technical data from website visits:</strong> kept by Vercel for limited periods that Vercel sets (see <a href="#hosting">section 6</a>).</li>
+          <li><strong>Other information</strong>, such as emails you send us: kept only as long as reasonably necessary for the purposes in this policy.</li>
         </ul>
-        <p>When information is no longer needed, we delete it or make it anonymous within a reasonable time.</p>
+        <h3>Deleting your information earlier</h3>
+        <p>You don’t have to wait. You can ask us to delete your information at any time by emailing <a href="mailto:support@adelvo-global.ae">support@adelvo-global.ae</a>.</p>
+        <h3>Exceptions</h3>
+        <p>We keep specific information longer only where this is necessary:</p>
+        <ul>
+          <li>to meet legal, tax or accounting obligations, for example invoices and records of approved software costs</li>
+          <li>to establish, exercise or defend legal claims, for example in a dispute</li>
+        </ul>
+        <p>In these cases we keep only the information needed for that purpose, only for as long as it is needed, and then delete it. If we can’t delete something you asked us to delete, we will tell you why.</p>
       </section>
 
       <section id="security">
-        <h2>10. Security</h2>
+        <h2>11. Security</h2>
         <p>We take reasonable steps to protect your information, such as limiting access to people who need it to deliver the service. No method of storing or sending information online is completely secure, so we can’t guarantee absolute security.</p>
       </section>
 
       <section id="your-requests">
-        <h2>11. Your requests</h2>
+        <h2>12. Your requests</h2>
         <p>You can email <a href="mailto:support@adelvo-global.ae">support@adelvo-global.ae</a> to ask us to:</p>
         <ul>
           <li>give you access to the personal information we hold about you</li>
           <li>correct information that is wrong or incomplete</li>
           <li>delete your personal information</li>
+          <li>stop sending you follow-up emails</li>
+          <li>not record or transcribe a call with you</li>
         </ul>
-        <p>We will handle your request subject to applicable legal requirements. In some cases we may need to keep certain information, for example to meet legal obligations, and we may need to confirm your identity before acting on a request.</p>
+        <p>Depending on where you live, you may have further rights under the data protection laws that apply to you. We will handle your request in line with applicable law. We may need to confirm your identity before acting on a request, and in some cases we may need to keep certain information, as explained in <a href="#retention">section 10</a>.</p>
       </section>
 
       <section id="changes">
-        <h2>12. Changes to this policy</h2>
+        <h2>13. Changes to this policy</h2>
         <p>We may update this policy from time to time, for example when we start using a new tool. The “Last updated” date at the top shows when it was last changed.</p>
       </section>
 
       <section id="contact">
-        <h2>13. Contact</h2>
+        <h2>14. Contact</h2>
         <p>Adelvo Global FZ-LLC<br /><a href="mailto:support@adelvo-global.ae">support@adelvo-global.ae</a></p>
       </section>
 
       <!-- ==========================================================
-           CALL RECORDING DISCLOSURE (not displayed on this page)
-           Read out or show before / at the start of a recorded call,
-           and add to the Calendly event description + confirmation email:
+           DEVELOPER NOTES (not displayed on this page)
+           - Add any new tool here once it processes personal information.
+           - The application form currently sends nothing itself (FORM_ENDPOINT
+             in js/apply.js is empty). If that changes, update sections 2 and 7.
+           - Recording: before Notetaker starts, ask every participant and only
+             record if they agree. Suggested wording for the Calendly event
+             description / confirmation email:
 
-           "Quick note: this call may be recorded and transcribed for
-           onboarding, documentation and service delivery purposes."
+             "We may want to record and transcribe this call with an AI
+             note-taking tool for onboarding, documentation and service
+             delivery. We'll ask you at the start of the call, and you can
+             say no. Booking the call doesn't mean you agree to recording."
            ========================================================== -->
     </div>
   </main>

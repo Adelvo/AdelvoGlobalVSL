@@ -17,7 +17,15 @@
 
   // Optional: also send every finished application (POST, JSON) to a webhook,
   // e.g. Zapier / Make / Formspree. Leave empty to skip.
+  // If you set this, update PRIVACY_NOTE and the Privacy Policy first: both
+  // currently say answers only leave the browser at the Calendly booking step.
   const FORM_ENDPOINT = '';
+
+  // Shown from the first question that asks for personal data (trusted HTML, not user input)
+  const PRIVACY_NOTE =
+    'Your answers stay in your browser until the booking step. There they’re passed to Calendly ' +
+    'to fill in your booking, and we use them to check if we’re a fit and to prepare for your call. ' +
+    'See our <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.';
 
   const STEPS = [
     {
@@ -37,6 +45,7 @@
       type: 'text',
       q: 'What is your full name?',
       autocomplete: 'name',
+      note: PRIVACY_NOTE,
     },
     {
       id: 'business_sells',
@@ -88,9 +97,7 @@
       q: 'Last one — what’s the best email to reach you?',
       autocomplete: 'email',
       placeholder: 'name@company.com',
-      // Shown under the field (trusted HTML, not user input)
-      note: 'Your answers are used to check if we’re a fit and to prepare for your call. ' +
-        'Booking is handled by Calendly. See our <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.',
+      note: PRIVACY_NOTE,
     },
   ];
 
@@ -282,8 +289,9 @@
       <div class="apply__book">
         <h2 id="apply-q" class="apply__q">${esc(name ? `Great, ${name}! You’re a fit.` : 'Great! You’re a fit.')} Pick a time for your strategy call.</h2>
         <p class="apply__text">Your answers are already filled in — just choose a time and confirm.</p>
-        <p class="apply__privacy">Calls may be recorded and transcribed for onboarding, documentation and service delivery purposes.
-          <a href="privacy-policy.html#recording" target="_blank">Learn more</a></p>
+        <p class="apply__privacy">We may want to record and transcribe the call with an AI note-taking tool, for onboarding,
+          documentation and service delivery. Booking the call does not mean you agree to this. You can say no, and the call
+          goes ahead without it. <a href="privacy-policy.html#recording" target="_blank" rel="noopener">Learn more</a></p>
         <div class="apply__calendly">
           <iframe src="${esc(calendlyLink({ embed: true }))}" title="Book your strategy call" loading="eager"></iframe>
         </div>
