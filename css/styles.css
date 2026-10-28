@@ -282,12 +282,12 @@ h1, h2, h3, p {
   .bg-card { scale: 0.8; }
 }
 
-/* Mobile: keep only a few small, very faint tiles */
+/* Mobile: same tiles as desktop, just smaller */
 @media (max-width: 760px) {
-  .hero__bg > :not(.bg-tile--m) { display: none; }
-  .bg-tile--m {
-    scale: 0.6;
-    opacity: 0.22;
+  .bg-tile,
+  .bg-card {
+    scale: 0.55;
+    opacity: 0.4;
   }
 }
 
@@ -1618,13 +1618,110 @@ html.apply-open {
     padding: 1.1rem 1.5rem;
   }
 
-  /* Tighter section spacing so stacked paddings don't leave large gaps */
+  /* Hero fills the first screen: "Apply For Free" sits at the bottom,
+     the next section starts below the fold */
+  .hero {
+    padding-block: 1.25rem 2rem;
+  }
+
+  .hero__inner {
+    min-height: calc(100vh - 3.25rem);
+    min-height: calc(100svh - 3.25rem);
+    gap: 1.25rem;
+  }
+
+  .hero__inner > * {
+    margin-block: 0;
+  }
+
+  .hero__inner > .hero__anchor {
+    margin-top: -0.5rem;
+  }
+
+  /* Leftover height goes above and below the video */
+  .hero__inner > .vsl {
+    margin-block: auto;
+  }
+
+  /* Section spacing */
   .why {
-    padding-block: 2.5rem 2rem;
+    padding-block: 3.5rem 3rem;
+  }
+
+  .why__headline {
+    margin-bottom: 1.5rem;
+  }
+
+  .why__text + .why__text {
+    margin-top: 1.4em;
+  }
+
+  .why .btn--compact {
+    margin-top: 2.25rem;
   }
 
   .offer {
-    padding-block: 2rem 2.5rem;
+    padding-block: 3rem;
+  }
+
+  .offer__totals {
+    margin-top: 1.75rem;
+    gap: 1rem;
+  }
+
+  .offer__fine {
+    margin-top: 1.5rem;
+  }
+
+  .offer .cta,
+  .steps .cta {
+    margin-top: 2.25rem;
+  }
+
+  .steps,
+  .faq {
+    padding-block: 3rem;
+  }
+
+  .steps__headline {
+    margin-top: 0.75rem;
+  }
+
+  .steps__sub {
+    margin-top: 0.85rem;
+  }
+
+  .steps__list {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+  .faq__list {
+    margin-top: 2rem;
+  }
+
+  .faq__q {
+    padding-block: 1.25rem;
+  }
+
+  .final {
+    padding-block: 3rem 4rem;
+  }
+
+  .final__headline {
+    margin-top: 1.5rem;
+  }
+
+  .final__sub {
+    margin-top: 1rem;
+  }
+
+  .final__price {
+    margin: 1.5rem 0 1.75rem;
+  }
+
+  .final__note {
+    margin-top: 1.25rem;
   }
 
   /* Phone-sized body copy: nothing important below 14px */
@@ -1653,7 +1750,7 @@ html.apply-open {
 
   .offer__item {
     gap: 0.7rem;
-    padding-block: 0.7rem;
+    padding-block: 0.9rem;
   }
 
   .offer__name {
@@ -1694,7 +1791,7 @@ html.apply-open {
 
   .step {
     gap: 0.85rem;
-    padding: 1rem;
+    padding: 1.15rem 1rem;
   }
 
   .step__num {
